@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    /* background: rgba(248, 37, 0, 0.514); */
+    background: rgb(56, 56, 56);
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 20rem;
+    height: auto;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 15px black; */
+background: linear-gradient(145deg, #3c3c3c, #323232);
+box-shadow:  7px 7px 17px #282828,
+             -7px -7px 17px #484848;
+}
+
+header h3 {
+    color: white;
+    margin: 2rem 0;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+}
+
+header span {
+    color: rgba(248, 37, 0, 1);
+    font-size: 1.5rem;
+}
+
+
+header p {
+    font-size: 1.2rem;
+}
+
+.arrow {
+    color: white;
+    margin: 5rem;
+    font-size: 5rem;
+    animation: arrow 1.5s ease-in-out infinite;
+}
+
+.fa-long-arrow-down::before {
+    font-size: 5rem;
+}
+
+
+@keyframes arrow {
+    0% {
+        color: rgba(248, 37, 0, 1);
+    }
+
+    50% {
+        color: rgb(56, 56, 56);
+    }
+
+    100% {
+        color: rgba(248, 37, 0, 1)
+    }
+}
+
+
+.container {
+    width: 100%;
+    min-height: 150vh;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.8fr 0.2fr;
+    gap: 3rem;
+    grid-template-areas: "profile profile skillls skillls"
+        "education education education language"
+        "contact experience experience experience"
+        "footer footer footer footer";
+}
+
+.boxx {
+    border-radius: 88px;
+    padding: 3rem;
+    background: #383838;
+    box-shadow: 7px 7px 17px #2f2f2f, -7px -7px 17px #414141;
+    transition: all 2s ease-in-out;
+}
+
+.boxx:hover {
+    border-radius: 88px;
+    background: #383838;
+    box-shadow: inset 7px 7px 17px #2f2f2f,
+        inset -7px -7px 17px #414141;
+}
+
+.profile {
+    grid-area: profile;
+    transition: all 1.5s ease-in-out;
+}
+
+.skillls {
+    grid-area: skillls;
+}
+
+.education {
+    grid-area: education;
+}
+
+.language {
+    grid-area: language;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.experience {
+    grid-area: experience;
+}
+
+footer {
+    grid-area: footer;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+    color: rgb(255, 56, 20);
+}
+
+.profile p {
+    margin-top: 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+
+.skillls div {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.skillls div progress[value] {
+    width: 100%;
+    height: 1rem;
+}
+
+.education p {
+    margin-top: 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+
+.education a {
+    text-decoration: none;
+    padding: 0.5rem 0.7rem;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 88px;
+    transition: all 0.5s ease;
+}
+
+.education a:hover{
+    background: #383838;
+    border: 0.5px solid rgb(255, 56, 20);
+    color: rgb(255, 56, 20);
+}
+
+.language ul {
+    margin: 1rem 0;
+    padding: 0.3rem 1rem;
+}
+
+.language ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+.experience p {
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.contact div i {
+    margin-right: 1rem;
+}
+
+footer {
+    text-align: center;
+}
+
+footer span{
+    color: rgb(255, 56, 20);
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+
+}
+
+@media only screen and (max-width:770px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 0.6fr 1fr 0.6fr 0.5fr 0.8fr 0.1fr;
+        grid-template-areas: "profile" "skillls" "education" "language" "contact" "experience" "footer";
+        padding: 1.2rem;
+    }
+    .boxx{
+        margin-right: 10rem;
+    }
+}
